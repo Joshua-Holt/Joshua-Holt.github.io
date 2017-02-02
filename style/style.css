@@ -2,7 +2,7 @@
 /* Add padding and change Font family */
 body {
 	margin: 0;
-	background:white;
+	background:orange;
     padding-top:50px;
 	font-family: 'Roboto', sans-serif;
 }
@@ -55,12 +55,8 @@ body {
     padding: 5px; 
 }
 
-.article {
-	background:white;
-	width:100%;
-}
-
 #currentArticle {
+	background:green;
 	width:100%;
 }
 
