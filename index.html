@@ -1,1 +1,68 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Joshua Holt</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu"></div>
+		<div id= "rootTimeline" class="timeline">
+	    	<div class="entry" onclick="selectArticle('articles/article001.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article002.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article003.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article004.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article005.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article006.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+	    	<div class="entry" onclick="selectArticle('articles/article007.html')">
+	        	<h2> Title has too many characters and is too long</h2>
+    	    	<img src="images/001.png"/>
+   			</div>
+		</div>
+		<div id ="content" class ="article"></div>
+		<div class ="footer">TEST FOOTER</div>
+	</body>
+	<script>
+		window.onload = function() {initialisePage()};
+		
+		function initialisePage() {
+			setDefaultScrollPosition()
+			currentArticle()
+		}
+
+		function setDefaultScrollPosition() {
+			/* scroll timeline to newest entry*/
+			var timeline = document.getElementById("rootTimeline");
+			timeline.scrollLeft = timeline.scrollWidth;
+		}
+		
+		function currentArticle() {
+			document.getElementById("content").innerHTML='<object id="currentArticle" type="text/html" data="articles/article001.html" ></object>';
+		}
+		function selectArticle(article) {
+			/* Should check if selected articles is the same as already loaded article, no need to reload*/
+			document.getElementById("content").innerHTML= ""
+			document.getElementById("content").innerHTML='<object id="currentArticle" type="text/html"></object>';
+			document.getElementById("currentArticle").setAttribute("data", article);
+		}
+		
+	</script>
+</html>
