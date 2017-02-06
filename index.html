@@ -4,11 +4,12 @@
 		<title>Joshua Holt</title>
 		<link id="mainStyle" rel="stylesheet" type="text/css" href="style/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="scripts/indexScript.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="menu"></div>
 		<div id= "rootTimeline" class="timeline">
-	    	<div class="entry" onclick="selectArticle('articles/article001.html')">
+	    	<div id = "first" class="entry" onclick="selectArticle('articles/article001.html')">
 	        	<h2> Title has too many characters and is too long</h2>
     	    	<img src="images/001.png"/>
    			</div>
@@ -40,33 +41,4 @@
 		<div id ="content" class ="article"></div>
 		<footer class ="footer">TEST FOOTER</footer>
 	</body>
-	<script>
-		window.onload = function() {initialisePage()};
-		
-		function initialisePage() {
-			setDefaultScrollPosition()
-			currentArticle()
-		}
-
-		function setDefaultScrollPosition() {
-			/* scroll timeline to newest entry*/
-			var timeline = document.getElementById("rootTimeline");
-			timeline.scrollLeft = timeline.scrollWidth;
-		}
-		
-		function currentArticle() {
-			document.getElementById("content").innerHTML='<object id="currentArticle" type="text/html" data="articles/article001.html" ></object>';
-		}
-		function selectArticle(article) {
-			/* Should check if selected articles is the same as already loaded article, no need to reload*/
-			document.getElementById("content").innerHTML='<object id="currentArticle" type="text/html"></object>';
-			document.getElementById("currentArticle").setAttribute("data", article);
-			reloadStyle();
-		}
-
-		function reloadStyle() {
-			document.getElementById("mainStyle").setAttribute("href", "style/style.css");
-		}
-		
-	</script>
 </html>

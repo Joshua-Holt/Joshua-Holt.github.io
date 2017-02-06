@@ -1,8 +1,11 @@
 body {
+	background:purple;
 	font-family: 'Roboto', sans-serif;
+	margin: auto;
+	width:80%;
+	overflow-y:hidden;
 }
 
 .article {
-	width:80%;
-	margin: auto;
+	background:blue;
 }

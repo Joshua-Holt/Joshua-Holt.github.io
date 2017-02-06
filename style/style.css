@@ -60,11 +60,19 @@ body {
     padding: 5px; 
 }
 
+.article {
+	background:red;
+}
+
 #currentArticle {
 	background:green;
-	display: inline;
+	display:block;
+	margin-bottom:96px;
+	padding-top:5px;
+	padding-bottom:5px;
 	width:100%;
-	height:auto;
+	//height:50px;			/* height for other articles */
+	//height:2035px;		/* height for first article */
 }
 
 .footer {
