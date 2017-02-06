@@ -28,7 +28,7 @@
 			var heightVariable = "1000px"
 			switch(article) {
 				case "articles/article001.html":
-					heightVariable = "2035px";
+					heightVariable = "2150px";
 					break;
 				case "articles/article002.html":
 					heightVariable = "50px";
